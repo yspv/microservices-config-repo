@@ -29,6 +29,7 @@ spring:
       client:
         registration:
           keycloak:
+            client-id: ostock
             issuer-uri: http://keycloak:8080/realms/ostock
       resourceserver:
         jwt:
