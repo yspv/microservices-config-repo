@@ -7,6 +7,10 @@ server:
 keycloak:
   uri: http://keycloak:8080
 
+logging:
+  level:
+    org.springframework.security: DEBUG
+
 
 spring:
   database:
