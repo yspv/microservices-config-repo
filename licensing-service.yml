@@ -27,19 +27,19 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issue-uri: ${keycloak.uri}/realms/ostock
+          issuer-uri: ${keyloack.uri}/realms/ostock
       client:
         registration:
           keycloak:
             client-id: ostock
-            authorization_grant_type: authorization_code
+            authorization-grant-type: authorization_code
             scope:
               - openid
-        provider:
-          keycloak:
-            issue-uri: ${keycloak.uri}/realms/ostock
-            user-name-attribute: preferred_username
-            
+      provider:
+        keycloak:
+          issuer-uri: ${keyloack.uri}/realms/ostock
+          user-name-attribute: preferred_username
+          
 
 eureka:
   instance:
