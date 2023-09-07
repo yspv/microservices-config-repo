@@ -27,23 +27,20 @@ spring:
   security:
     oauth2:
       client:
-        provider:
-          keycloak:
-            user-name-attribute: preferred_username
-            issuer-uri: http://keycloak:8080/realms/ostock
-            
         registration:
           keycloak:
             client-id: ostock
+            authorization-grant-type: authorization_code
+            scope: openid
+        provider:
+          keycloak:
             issuer-uri: http://keycloak:8080/realms/ostock
-            scope:
-              - openid
+            user-name-attribute: preferred_username
+
       resourceserver:
         jwt:
           issuer-uri: http://keycloak:8080/realms/ostock
-          jwk-set-uri: http://keycloak:8080/realms/ostock/protocol/openid-connect/certs
-
-            
+              
 
 eureka:
   instance:
