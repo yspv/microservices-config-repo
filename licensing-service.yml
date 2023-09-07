@@ -44,7 +44,7 @@ spring:
 
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8080/realms/ostock
+          issuer-uri: http://keycloak:8080/auth/realms/ostock
               
 
 eureka:
