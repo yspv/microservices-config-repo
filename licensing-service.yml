@@ -4,6 +4,10 @@ example:
 server:
   port: 8080
 
+keycloak:
+  uri: http://keycloak:8080
+
+
 spring:
   database:
     driver-class-name: org.postgresql.Driver
@@ -19,6 +23,23 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issue-uri: ${keycloak.uri}/realms/ostock
+      client:
+        registration:
+          keycloak:
+            client-id: ostock
+            authorization_gant_type: authorization_code
+            scope:
+              - opendid
+        provider:
+          keycloak:
+            issue-uri: ${keycloak.uri}/realms/ostock
+            user-name-attribute: preferred_username
+            
 
 eureka:
   instance:
