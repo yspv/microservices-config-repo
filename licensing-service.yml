@@ -27,6 +27,11 @@ spring:
   security:
     oauth2:
       client:
+        provider:
+          keycloak:
+            user-name-attribute: preferred_username
+            issuer-uri: http://keycloak:8080/realms/ostock
+            
         registration:
           keycloak:
             client-id: ostock
