@@ -39,12 +39,16 @@ spring:
             client-secret: KdCx39Oj4RU6ec2k96gzCI4GfWoBezlE
         provider:
           keycloak:
+            jwk-set-uri: http://localhost:8073/realms/ostock/protocol/openid-connect/certs
+            authorization-uri: http://localhost:8073/auth/realms/ostock/protocol/openid-connect/auth
+            token-uri: http://localhost:8073/realms/ostock/protocol/openid-connect/token
             issuer-uri: http://keycloak:8080/realms/ostock
             user-name-attribute: preferred_username
 
       resourceserver:
         jwt:
           issuer-uri: http://keycloak:8080/realms/ostock
+          jwk-set-uri: http://localhost:8073/realms/ostock/protocol/openid-connect/certs
               
 
 eureka:
