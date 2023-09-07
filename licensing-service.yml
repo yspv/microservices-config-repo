@@ -29,11 +29,7 @@ spring:
       client:
         registration:
           keycloak:
-            client-id: ostock
-            authorization-grant-type: authorization_code
-            scope: openid
             issuer-uri: http://keycloak:8080/realms/ostock
-            user-name-attribute: preferred_username
       resourceserver:
         jwt:
           issuer-uri: http://keycloak:8080/realms/ostock
