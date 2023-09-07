@@ -32,9 +32,9 @@ spring:
         registration:
           keycloak:
             client-id: ostock
-            authorization_gant_type: authorization_code
+            authorization_grant_type: authorization_code
             scope:
-              - opendid
+              - openid
         provider:
           keycloak:
             issue-uri: ${keycloak.uri}/realms/ostock
