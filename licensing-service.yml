@@ -36,6 +36,8 @@ spring:
           keycloak:
             client-id: ostock
             issuer-uri: http://keycloak:8080/realms/ostock
+            scope:
+              - openid
       resourceserver:
         jwt:
           issuer-uri: http://keycloak:8080/realms/ostock
