@@ -27,7 +27,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: ${keycloack.uri}/realms/ostock
+          issuer-uri: http://keycloak:8080/realms/ostock
       client:
         registration:
           keycloak:
@@ -37,7 +37,7 @@ spring:
               - openid
       provider:
         keycloak:
-          issuer-uri: ${keycloack.uri}/realms/ostock
+          issuer-uri: http://keycloak:8080/realms/ostock
           user-name-attribute: preferred_username
           
 
