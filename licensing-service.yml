@@ -23,23 +23,14 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
   security:
     oauth2:
       resourceserver:
         jwt:
           issuer-uri: http://keycloak:8080/realms/ostock
-      client:
-        registration:
-          keycloak:
-            client-id: ostock
-            authorization-grant-type: authorization_code
-            scope:
-              - openid
-      provider:
-        keycloak:
-          issuer-uri: http://keycloak:8080/realms/ostock
-          user-name-attribute: preferred_username
-          
+          jwk-set-uri: http://keycloak:8080/realms/ostock/protocol/openid-connect/certs
+            
 
 eureka:
   instance:
