@@ -36,7 +36,7 @@ spring:
             client-id: ostock
             authorization-grant-type: authorization_code
             scope: openid
-            client-secret: KdCx39Oj4RU6ec2k96gzCI4GfWoBezlE
+            client-secret: secret
         provider:
           keycloak:
             jwk-set-uri: http://keycloak:8080/realms/ostock/protocol/openid-connect/certs
